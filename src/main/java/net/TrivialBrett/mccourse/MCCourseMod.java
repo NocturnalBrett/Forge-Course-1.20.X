@@ -28,7 +28,7 @@ public class MCCourseMod
 
         modEventBus.addListener(this::commonSetup);
 
-        // Register ourselves for server and other game events we are interested in
+
         MinecraftForge.EVENT_BUS.register(this);
 
         // Register the item to a creative tab
