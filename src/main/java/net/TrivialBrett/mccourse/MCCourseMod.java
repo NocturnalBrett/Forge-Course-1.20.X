@@ -2,6 +2,7 @@ package net.TrivialBrett.mccourse;
 
 import com.mojang.logging.LogUtils;
 import net.TrivialBrett.mccourse.block.ModBlocks;
+import net.TrivialBrett.mccourse.item.ModCreativeModeTabs;
 import net.TrivialBrett.mccourse.item.ModItems;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -31,6 +32,8 @@ public class MCCourseMod
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        ModCreativeModeTabs.register(modEventBus);
+
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
@@ -57,6 +60,7 @@ public class MCCourseMod
 
         if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS)
         {
+            // Adds blocks to tabs in creative mode
             event.accept(ModBlocks.ALEXANDRITE_BLOCK);
             event.accept(ModBlocks.RAW_ALEXANDRITE_BLOCK);
             event.accept(ModBlocks.ALEXANDRITE_ORE);
