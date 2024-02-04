@@ -35,9 +35,14 @@ public class MetalDetectorItem extends Item {
             Player player = pContext.getPlayer();
             boolean foundBlock = false;
 
-            for(int i = 0; i <= positionClicked.getY() + 64; i++)
+            int bedrock = -64;
+
+
+            for(int i = bedrock; i <= positionClicked.getY(); i++)
             {
                 BlockState blockState = pContext.getLevel().getBlockState(positionClicked.below(i));
+
+                MCCourseMod.LOGGER.info("Test: " + i);
 
                 if(isValuableBlock(blockState))
                 {
