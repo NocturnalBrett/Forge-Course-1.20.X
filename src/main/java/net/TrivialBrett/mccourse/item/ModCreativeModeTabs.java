@@ -18,8 +18,10 @@ public class ModCreativeModeTabs {
     public static final RegistryObject<CreativeModeTab> COURSE_TAB = CREATIVE_MODE_TABS.register("course_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.ALEXANDRITE.get()))
                     .title(Component.translatable("creativetab.course_tab")).displayItems((displayParameters, output) -> {
+
                         output.accept(ModItems.ALEXANDRITE.get());
                         output.accept(ModItems.RAW_ALEXANDRITE.get());
+                        output.accept(ModItems.METAL_DETECTOR.get());
 
 
                         output.accept(ModBlocks.ALEXANDRITE_BLOCK.get());
@@ -28,6 +30,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.DEEPSLATE_ALEXANDRITE_ORE.get());
                         output.accept(ModBlocks.END_STONE_ALEXANDRITE_ORE.get());
                         output.accept(ModBlocks.NETHER_ALEXANDRITE_ORE.get());
+
 
 
                     }).build());
