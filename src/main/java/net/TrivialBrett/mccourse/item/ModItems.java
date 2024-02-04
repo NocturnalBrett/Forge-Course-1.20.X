@@ -2,6 +2,7 @@ package net.TrivialBrett.mccourse.item;
 
 import net.TrivialBrett.mccourse.MCCourseMod;
 import net.TrivialBrett.mccourse.item.custom.MetalDetectorItem;
+import net.minecraft.world.food.Foods;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -21,6 +22,12 @@ public class ModItems {
 
     public static final RegistryObject<Item> METAL_DETECTOR = ITEMS.register("metal_detector",
             () -> new MetalDetectorItem(new Item.Properties().durability(512)));
+
+    public static final RegistryObject<Item> KOHLRABI = ITEMS.register("kohlrabi",
+            () -> new Item(new Item.Properties().food(ModFoodProperties.KOHLRABI)));
+
+    public static final RegistryObject<Item> KOHLRABI = ITEMS.register("kohlrabi",
+            () -> new Item(new Item.Properties().food(ModFoodProperties.KOHLRABI)));
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
