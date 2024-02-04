@@ -14,5 +14,9 @@
   "block.mccourse.sound_block": "Sound Block",
 
   "creativetab.course_tab": "CourseTab",
-  "item.mccourse.metal_detector.no_valuables": "No valuables found!"
+  "item.mccourse.metal_detector.no_valuables": "No valuables found!",
+
+  "tooltip.mccourse.metal_detector.tooltip.shift": "Right Click on blocks to find valuables",
+  "tooltip.mccourse.metal_detector.tooltip": "Press §eShift§r For more Info",
+  "tooltip.mccourse.sound_block": "Plays nice sounds when walking or right-clicking"
 }
