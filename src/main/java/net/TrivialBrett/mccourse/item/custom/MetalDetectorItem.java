@@ -1,5 +1,7 @@
 package net.TrivialBrett.mccourse.item.custom;
 
+import net.TrivialBrett.mccourse.MCCourseMod;
+import net.TrivialBrett.mccourse.block.ModBlocks;
 import net.minecraft.client.resources.language.I18n;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
