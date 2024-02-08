@@ -42,11 +42,19 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.ALEXANDRITE_STAIRS);
         blockItem(ModBlocks.ALEXANDRITE_PRESSURE_PLATE);
         blockItem(ModBlocks.ALEXANDRITE_FENCE_GATE);
+        blockItem(ModBlocks.ALEXANDRITE_TRAPDOOR, "_bottom");
 
+        doorBlockWithRenderType(((DoorBlock)ModBlocks.ALEXANDRITE_DOOR.get()), modLoc("block/alexandrite_door_bottom"), modLoc("block/alexandrite_door_top"),
+                "cutout");
+
+        trapdoorBlockWithRenderType(((TrapDoorBlock) ModBlocks.ALEXANDRITE_TRAPDOOR.get()), modLoc("block/alexandrite_trapdoor"), true, "cutout");
     }
 
     private void blockItem(RegistryObject<Block> blockRegistryObject){
         simpleBlockItem(blockRegistryObject.get(), new ModelFile.UncheckedModelFile("mccourse:block/" + ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath()));
+    }
+    private void blockItem(RegistryObject<Block> blockRegistryObject, String appendix){
+        simpleBlockItem(blockRegistryObject.get(), new ModelFile.UncheckedModelFile("mccourse:block/" + ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath() + appendix));
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
