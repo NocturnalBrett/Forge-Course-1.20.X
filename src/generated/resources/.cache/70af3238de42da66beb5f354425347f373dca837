@@ -1,0 +1,5 @@
+// 1.20	2024-02-08T11:14:48.3033741	Block Tags
+5f226d87fb0a63437b0af494c4870fc24b7dfd82 data/mccourse/tags/blocks/metal_detector_valuables.json
+6553d34f445260d6c02f7d97b45c2e7d33c44c59 data/minecraft/tags/blocks/mineable/pickaxe.json
+6dd642dc4bc8d0a18816d1f9abf49125ed509a2b data/minecraft/tags/blocks/needs_diamond_tool.json
+905f9fb989b2a02b8a9d68a380a4fd916a0c2d83 data/minecraft/tags/blocks/needs_iron_tool.json
