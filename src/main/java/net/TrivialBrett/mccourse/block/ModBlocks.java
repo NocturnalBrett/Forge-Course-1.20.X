@@ -3,6 +3,8 @@ package net.TrivialBrett.mccourse.block;
 import net.TrivialBrett.mccourse.MCCourseMod;
 import net.TrivialBrett.mccourse.block.custom.SoundBlock;
 import net.TrivialBrett.mccourse.item.ModItems;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -74,6 +76,17 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> ALEXANDRITE_BUTTON = registerBlock("alexandrite_button",
             () -> new ButtonBlock(BlockBehaviour.Properties.copy(Blocks.GRANITE_SLAB).sound(SoundType.METAL), BlockSetType.IRON, 10, true));
+                    // or copy(Blocks.IRON_BLOCK)));
+
+
+    public static final RegistryObject<Block> ALEXANDRITE_FENCE = registerBlock("alexandrite_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+                    // or copy(Blocks.IRON_BLOCK)));
+    public static final RegistryObject<Block> ALEXANDRITE_FENCE_GATE = registerBlock("alexandrite_fence_gate",
+            () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
+                    // or copy(Blocks.IRON_BLOCK)));
+    public static final RegistryObject<Block> ALEXANDRITE_WALL = registerBlock("alexandrite_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
                     // or copy(Blocks.IRON_BLOCK)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block)
