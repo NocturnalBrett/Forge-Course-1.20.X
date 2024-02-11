@@ -7,6 +7,8 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
@@ -25,6 +27,12 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.KOHLRABI.get());
                         output.accept(ModItems.PEAT_BRICK.get());
 
+                        output.accept(ModItems.ALEXANDRITE_SWORD.get());
+                        output.accept(ModItems.ALEXANDRITE_SHOVEL.get());
+                        output.accept(ModItems.ALEXANDRITE_HOE.get());
+                        output.accept(ModItems.ALEXANDRITE_PICKAXE.get());
+                        output.accept(ModItems.ALEXANDRITE_AXE.get());
+                        output.accept(ModItems.ALEXANDRITE_PAXEL.get());
 
                         output.accept(ModBlocks.ALEXANDRITE_BLOCK.get());
                         output.accept(ModBlocks.ALEXANDRITE_ORE.get());
@@ -46,6 +54,8 @@ public class ModCreativeModeTabs {
 
                         output.accept(ModBlocks.ALEXANDRITE_TRAPDOOR.get());
                         output.accept(ModBlocks.ALEXANDRITE_DOOR.get());
+
+
 
 
 

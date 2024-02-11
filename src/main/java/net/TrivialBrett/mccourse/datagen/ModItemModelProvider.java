@@ -29,6 +29,13 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.METAL_DETECTOR);
         simpleItem(ModItems.PEAT_BRICK);
 
+        handHeldItem(ModItems.ALEXANDRITE_SWORD);
+        handHeldItem(ModItems.ALEXANDRITE_SHOVEL);
+        handHeldItem(ModItems.ALEXANDRITE_AXE);
+        handHeldItem(ModItems.ALEXANDRITE_HOE);
+        handHeldItem(ModItems.ALEXANDRITE_PICKAXE);
+        handHeldItem(ModItems.ALEXANDRITE_PAXEL);
+
         buttonItem(ModBlocks.ALEXANDRITE_BUTTON, ModBlocks.ALEXANDRITE_BLOCK);
         fenceItem(ModBlocks.ALEXANDRITE_FENCE, ModBlocks.ALEXANDRITE_BLOCK);
         wallItem(ModBlocks.ALEXANDRITE_WALL, ModBlocks.ALEXANDRITE_BLOCK);
@@ -61,4 +68,11 @@ public class ModItemModelProvider extends ItemModelProvider {
                 new ResourceLocation("item/generated")).texture("layer0",
                 new ResourceLocation(MCCourseMod.MOD_ID,"item/" + item.getId().getPath()));
     }
+
+    private ItemModelBuilder handHeldItem(RegistryObject<Item> item){
+        return withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/handheld")).texture("layer0",
+                new ResourceLocation(MCCourseMod.MOD_ID,"item/" + item.getId().getPath()));
+    }
+
 }

@@ -38,6 +38,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         fenceGateBlock(((FenceGateBlock) ModBlocks.ALEXANDRITE_FENCE_GATE.get()), blockTexture(ModBlocks.ALEXANDRITE_BLOCK.get()));
         wallBlock(((WallBlock) ModBlocks.ALEXANDRITE_WALL.get()), blockTexture(ModBlocks.ALEXANDRITE_BLOCK.get()));
 
+
         blockItem(ModBlocks.ALEXANDRITE_SLAB);
         blockItem(ModBlocks.ALEXANDRITE_STAIRS);
         blockItem(ModBlocks.ALEXANDRITE_PRESSURE_PLATE);

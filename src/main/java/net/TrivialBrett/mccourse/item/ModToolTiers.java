@@ -1,0 +1,21 @@
+package net.TrivialBrett.mccourse.item;
+
+import java.util.List;
+import net.TrivialBrett.mccourse.MCCourseMod;
+import net.TrivialBrett.mccourse.util.ModTags;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.Tiers;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraftforge.common.ForgeTier;
+import net.minecraftforge.common.TierSortingRegistry;
+
+public class ModToolTiers {
+
+    // Creates a new tier
+    public static final Tier ALEXANDRITE = TierSortingRegistry.registerTier(
+            new ForgeTier(5, 2000, 9f, 3f, 26,
+                    ModTags.Blocks.NEEDS_ALEXANDRITE_TOOL, () -> Ingredient.of(ModItems.ALEXANDRITE.get())),
+            new ResourceLocation(MCCourseMod.MOD_ID, "alexandrite"), List.of(Tiers.NETHERITE), List.of());
+
+}
