@@ -2,6 +2,7 @@ package net.TrivialBrett.mccourse.item;
 
 import net.TrivialBrett.mccourse.MCCourseMod;
 import net.TrivialBrett.mccourse.item.custom.FuelItem;
+import net.TrivialBrett.mccourse.item.custom.HammerItem;
 import net.TrivialBrett.mccourse.item.custom.MetalDetectorItem;
 import net.TrivialBrett.mccourse.item.custom.PaxelItem;
 import net.minecraft.world.food.Foods;
@@ -48,6 +49,9 @@ public class ModItems {
 
     public static final RegistryObject<Item> ALEXANDRITE_PAXEL = ITEMS.register("alexandrite_paxel",
             () -> new PaxelItem(ModToolTiers.ALEXANDRITE, 2, 3, new Item.Properties().durability(256)));
+
+    public static final RegistryObject<Item> ALEXANDRITE_HAMMER = ITEMS.register("alexandrite_hammer",
+            () -> new HammerItem(ModToolTiers.ALEXANDRITE, 2, 3, new Item.Properties().durability(256)));
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
