@@ -1,11 +1,15 @@
-// 1.20	2024-02-11T19:01:04.7300465	Item Models: mccourse
+// 1.20	2024-02-12T12:49:09.3458665	Item Models: mccourse
 71badbc60185c294e740a7e69a688a1a52a23e11 assets/mccourse/models/item/alexandrite.json
 2708264e5c6062ce8fed21db45430ddac33ffa5c assets/mccourse/models/item/alexandrite_axe.json
+81a1e87c000330511a9b145e7951600d6922af72 assets/mccourse/models/item/alexandrite_boots.json
 cfc705788577468640df77a99d391497448608d0 assets/mccourse/models/item/alexandrite_button.json
+2a9f4edeb8f169346a9fc18f7ef92c1301d54814 assets/mccourse/models/item/alexandrite_chestplate.json
 b8e1cf935d31db078f2d1b9f2a85a226774bb2a6 assets/mccourse/models/item/alexandrite_door.json
 baa0c13ac61011d19305b6ac539291971b668c8c assets/mccourse/models/item/alexandrite_fence.json
 c6877a462ee5e94b0dc7583818f058cedccf54eb assets/mccourse/models/item/alexandrite_hammer.json
+b042fcedcf52a7f582a6e24e075861ab0b4225ed assets/mccourse/models/item/alexandrite_helmet.json
 fc9a2b04d13ded16522c28312bc4d5fd93ba47fe assets/mccourse/models/item/alexandrite_hoe.json
+61eb27bcc1b704be274f010b7ce23f1cf5325f79 assets/mccourse/models/item/alexandrite_leggings.json
 0cc797b0bbb477ddb6a2d33ddf28cdf737d82586 assets/mccourse/models/item/alexandrite_paxel.json
 e5ff91a4c82eff3f90e101d271cd2cadd04fdab1 assets/mccourse/models/item/alexandrite_pickaxe.json
 d7e3fd08979fe3c1c55c99799913461186f0b41b assets/mccourse/models/item/alexandrite_shovel.json

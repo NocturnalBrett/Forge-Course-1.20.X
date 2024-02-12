@@ -13,6 +13,11 @@
   "item.mccourse.alexandrite_paxel": "Alexandrtie Paxel",
   "item.mccourse.alexandrite_hammer": "Alexandrtie Hammer",
 
+  "item.mccourse.alexandrite_helmet": "Alexandrtie Helmet",
+  "item.mccourse.alexandrite_chestplate": "Alexandrtie Chestplate",
+  "item.mccourse.alexandrite_leggings": "Alexandrtie Leggings",
+  "item.mccourse.alexandrite_boots": "Alexandrtie Boots",
+
   "block.mccourse.alexandrite_block": "Block of Alexandrite",
   "block.mccourse.raw_alexandrite_block": "Block of Raw Alexandrite",
 
@@ -29,6 +34,7 @@
   "block.mccourse.alexandrite_wall": "Alexandrite Wall",
   "block.mccourse.alexandrite_door": "Alexandrite Door",
   "block.mccourse.alexandrite_trapdoor": "Alexandrite Trapdoor",
+  "block.mccourse.alexandrite_lamp": "Alexandrite Lamp",
 
   "block.mccourse.sound_block": "Sound Block",
 
@@ -38,5 +44,6 @@
 
   "tooltip.mccourse.metal_detector.tooltip.shift": "Right Click on Blocks to find Valuables!",
   "tooltip.mccourse.metal_detector.tooltip": "Press §eSHIFT§r for more Information",
-  "tooltip.mccourse.sound_block": "Plays nice sounds when walking or right-clicking."
+  "tooltip.mccourse.sound_block": "Plays nice sounds when walking or right-clicking.",
+  "tooltip.mccourse.slowing_sword": "Applies Slowness to enemy."
 }
