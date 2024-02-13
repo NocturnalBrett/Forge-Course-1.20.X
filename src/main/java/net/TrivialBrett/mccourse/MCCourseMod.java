@@ -3,6 +3,7 @@ package net.TrivialBrett.mccourse;
 import com.mojang.logging.LogUtils;
 import net.TrivialBrett.mccourse.block.ModBlocks;
 import net.TrivialBrett.mccourse.item.ModCreativeModeTabs;
+import net.TrivialBrett.mccourse.item.ModItemProperties;
 import net.TrivialBrett.mccourse.item.ModItems;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -84,7 +85,10 @@ public class MCCourseMod
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
+            event.enqueueWork(() -> {
+                ModItemProperties.addCustomItemProperties();
 
+            });
         }
     }
 }
