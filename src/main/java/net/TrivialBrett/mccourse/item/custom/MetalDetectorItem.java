@@ -2,10 +2,13 @@ package net.TrivialBrett.mccourse.item.custom;
 
 import net.TrivialBrett.mccourse.MCCourseMod;
 import net.TrivialBrett.mccourse.block.ModBlocks;
+import net.TrivialBrett.mccourse.item.ModItems;
+import net.TrivialBrett.mccourse.util.InventoryUtil;
 import net.TrivialBrett.mccourse.util.ModTags;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.resources.language.I18n;
 import net.minecraft.core.BlockPos;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
@@ -49,6 +52,13 @@ public class MetalDetectorItem extends Item {
                     outputValuableCoordinates(positionClicked.below(i), player, blockState.getBlock());
                     foundBlock = true;
 
+                    // Checks if player has Data Tablet in inventory
+                    if(InventoryUtil.hasPlayerStackInInventory(player, ModItems.DATA_TABLET.get())){
+
+                        // Adds data to the Data Tablet
+                        addDataToDataTablet(player, positionClicked.below(i), blockState.getBlock());
+                    }
+
                     break;
                 }
             }
@@ -64,6 +74,20 @@ public class MetalDetectorItem extends Item {
                 player -> player.broadcastBreakEvent(player.getUsedItemHand()));
 
         return InteractionResult.SUCCESS;
+    }
+
+    private void addDataToDataTablet(Player player, BlockPos below, Block block) {
+        // Gets the inventory slot that the Data Tablet is in
+        ItemStack dataTablet = player.getInventory().getItem(InventoryUtil.getFirstInventoryIndex(player, ModItems.DATA_TABLET.get()));
+
+        // Adds data to Data Tablet
+        CompoundTag data = new CompoundTag();
+        data.putString("mccourse.found_ore", "Valuable Found: " + I18n.get(block.getDescriptionId())
+                + " at (" + below.getX() + ", " + below.getY() + ", " + below.getZ() + ")");
+
+        dataTablet.setTag(data);
+
+
     }
 
     @Override
