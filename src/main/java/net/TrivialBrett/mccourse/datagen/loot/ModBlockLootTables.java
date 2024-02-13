@@ -19,7 +19,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
-        // This is what the blocks will drop when broken
+        // This is what the blocks will drop when broke
 
         this.dropSelf(ModBlocks.ALEXANDRITE_BLOCK.get());
         this.dropSelf(ModBlocks.ALEXANDRITE_LAMP.get());
