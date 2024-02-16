@@ -28,6 +28,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.KOHLRABI);
         simpleItem(ModItems.METAL_DETECTOR);
         simpleItem(ModItems.PEAT_BRICK);
+        simpleItem(ModItems.KOHLRABI_SEEDS);
         // simpleItem(ModItems.DATA_TABLET);
 
         simpleItem(ModItems.ALEXANDRITE_HELMET);

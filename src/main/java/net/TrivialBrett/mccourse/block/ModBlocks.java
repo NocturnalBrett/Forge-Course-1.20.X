@@ -2,6 +2,7 @@ package net.TrivialBrett.mccourse.block;
 
 import net.TrivialBrett.mccourse.MCCourseMod;
 import net.TrivialBrett.mccourse.block.custom.AlexandriteLampBlock;
+import net.TrivialBrett.mccourse.block.custom.KohlrabiCropBlock;
 import net.TrivialBrett.mccourse.block.custom.SoundBlock;
 import net.TrivialBrett.mccourse.item.ModItems;
 import net.minecraft.sounds.SoundEvents;
@@ -101,6 +102,10 @@ public class ModBlocks {
             () -> new AlexandriteLampBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BLUE).sound(SoundType.GLASS)
                     .lightLevel(state -> state.getValue(AlexandriteLampBlock.CLICKED) ? 15 : 0)));
     // or copy(Blocks.IRON_BLOCK)));
+
+
+    public static final RegistryObject<Block> KOHLRABI_CROP = BLOCKS.register("kohlrabi_crop",
+            () -> new KohlrabiCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block)
     {

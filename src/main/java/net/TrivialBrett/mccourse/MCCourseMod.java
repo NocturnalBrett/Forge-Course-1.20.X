@@ -7,6 +7,7 @@ import net.TrivialBrett.mccourse.item.ModItemProperties;
 import net.TrivialBrett.mccourse.item.ModItems;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.CreativeModeTabRegistry;
 import net.minecraftforge.common.MinecraftForge;
@@ -46,7 +47,11 @@ public class MCCourseMod
 
     private void commonSetup(final FMLCommonSetupEvent event)
     {
-        // test
+        // Add item to composter
+        event.enqueueWork(() -> {
+            ComposterBlock.COMPOSTABLES.put(ModItems.KOHLRABI.get(), 0.34f);
+            ComposterBlock.COMPOSTABLES.put(ModItems.KOHLRABI_SEEDS.get(), 0.15f);
+        });
 
     }
 

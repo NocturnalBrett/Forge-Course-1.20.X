@@ -3,15 +3,19 @@ package net.TrivialBrett.mccourse.datagen;
 import net.TrivialBrett.mccourse.MCCourseMod;
 import net.TrivialBrett.mccourse.block.ModBlocks;
 import net.TrivialBrett.mccourse.block.custom.AlexandriteLampBlock;
+import net.TrivialBrett.mccourse.block.custom.KohlrabiCropBlock;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+
+import java.util.function.Function;
 
 
 public class ModBlockStateProvider extends BlockStateProvider {
@@ -54,6 +58,24 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 "cutout");
 
         trapdoorBlockWithRenderType(((TrapDoorBlock) ModBlocks.ALEXANDRITE_TRAPDOOR.get()), modLoc("block/alexandrite_trapdoor"), true, "cutout");
+
+
+        makeCrop(((KohlrabiCropBlock) ModBlocks.KOHLRABI_CROP.get()),  "kohlrabi_stage","kohlrabi_stage");
+
+    }
+
+    public void makeCrop(CropBlock block, String modelName, String textureName) {
+        Function<BlockState, ConfiguredModel[]> function = state -> states(state, block, modelName, textureName);
+
+        getVariantBuilder(block).forAllStates(function);
+    }
+
+    private ConfiguredModel[] states(BlockState state, CropBlock block, String modelName, String textureName) {
+        ConfiguredModel[] models = new ConfiguredModel[1];
+        models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((KohlrabiCropBlock) block).getAgeProperty()),
+                new ResourceLocation(MCCourseMod.MOD_ID, "block/" + textureName + state.getValue(((KohlrabiCropBlock) block).getAgeProperty()))).renderType("cutout"));
+
+        return models;
     }
 
     private void blockItem(RegistryObject<Block> blockRegistryObject){
