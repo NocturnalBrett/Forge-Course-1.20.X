@@ -3,6 +3,7 @@ package net.TrivialBrett.mccourse.item.custom;
 import net.TrivialBrett.mccourse.MCCourseMod;
 import net.TrivialBrett.mccourse.block.ModBlocks;
 import net.TrivialBrett.mccourse.item.ModItems;
+import net.TrivialBrett.mccourse.sound.ModSounds;
 import net.TrivialBrett.mccourse.util.InventoryUtil;
 import net.TrivialBrett.mccourse.util.ModTags;
 import net.minecraft.client.gui.screens.Screen;
@@ -10,6 +11,7 @@ import net.minecraft.client.resources.language.I18n;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
@@ -58,6 +60,9 @@ public class MetalDetectorItem extends Item {
                         // Adds data to the Data Tablet
                         addDataToDataTablet(player, positionClicked.below(i), blockState.getBlock());
                     }
+
+                    pContext.getLevel().playSeededSound(null, player.getX(), player.getY(), player.getZ(),
+                            ModSounds.METAL_DETECTOR_FOUND_ORE.get(), SoundSource.BLOCKS, 1f, 1f, 0);
 
                     break;
                 }

@@ -5,6 +5,7 @@ import net.TrivialBrett.mccourse.block.ModBlocks;
 import net.TrivialBrett.mccourse.item.ModCreativeModeTabs;
 import net.TrivialBrett.mccourse.item.ModItemProperties;
 import net.TrivialBrett.mccourse.item.ModItems;
+import net.TrivialBrett.mccourse.sound.ModSounds;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.Blocks;
@@ -40,6 +41,8 @@ public class MCCourseMod
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+
+        ModSounds.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
