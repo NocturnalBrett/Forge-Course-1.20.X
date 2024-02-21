@@ -62,6 +62,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         makeCrop(((KohlrabiCropBlock) ModBlocks.KOHLRABI_CROP.get()),  "kohlrabi_stage","kohlrabi_stage");
 
+        simpleBlock(ModBlocks.SNAPDRAGON.get(),
+                models().cross(blockTexture(ModBlocks.SNAPDRAGON.get()).getPath(), blockTexture(ModBlocks.SNAPDRAGON.get())).renderType("cutout"));
     }
 
     public void makeCrop(CropBlock block, String modelName, String textureName) {

@@ -65,6 +65,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.ALEXANDRITE_LAMP.get());
 
                         output.accept(ModBlocks.KOHLRABI_CROP.get());
+                        output.accept(ModBlocks.SNAPDRAGON.get());
 
 
 
