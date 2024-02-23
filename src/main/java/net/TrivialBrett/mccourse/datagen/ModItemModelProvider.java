@@ -51,8 +51,14 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         simpleBlockItem(ModBlocks.ALEXANDRITE_DOOR);
         simpleBlockItem(ModBlocks.SNAPDRAGON);
+
+        complexBlock(ModBlocks.GEM_EMPOWERING_STATION.get());
     }
 
+    private ItemModelBuilder complexBlock(Block block) {
+        return withExistingParent(ForgeRegistries.BLOCKS.getKey(block).getPath(), new ResourceLocation(MCCourseMod.MOD_ID,
+                "block/" + ForgeRegistries.BLOCKS.getKey(block).getPath()));
+    }
     public void fenceItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock){
         this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/fence_inventory"))
                 .texture("texture", new ResourceLocation(MCCourseMod.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));

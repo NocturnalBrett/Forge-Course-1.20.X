@@ -2,6 +2,7 @@ package net.TrivialBrett.mccourse.block;
 
 import net.TrivialBrett.mccourse.MCCourseMod;
 import net.TrivialBrett.mccourse.block.custom.AlexandriteLampBlock;
+import net.TrivialBrett.mccourse.block.custom.GemEmpoweringStationBlock;
 import net.TrivialBrett.mccourse.block.custom.KohlrabiCropBlock;
 import net.TrivialBrett.mccourse.block.custom.SoundBlock;
 import net.TrivialBrett.mccourse.item.ModItems;
@@ -116,6 +117,9 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> POTTED_SNAPDRAGON = BLOCKS.register("potted_snapdragon",
             () -> new FlowerPotBlock((() -> (FlowerPotBlock) Blocks.FLOWER_POT), SNAPDRAGON, BlockBehaviour.Properties.copy(Blocks.POTTED_ALLIUM)));
+
+    public static final RegistryObject<Block> GEM_EMPOWERING_STATION = registerBlock("gem_empowering_station",
+            () -> new GemEmpoweringStationBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block)
     {
