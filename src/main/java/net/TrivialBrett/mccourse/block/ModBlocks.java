@@ -5,6 +5,7 @@ import net.TrivialBrett.mccourse.block.custom.AlexandriteLampBlock;
 import net.TrivialBrett.mccourse.block.custom.KohlrabiCropBlock;
 import net.TrivialBrett.mccourse.block.custom.SoundBlock;
 import net.TrivialBrett.mccourse.item.ModItems;
+import net.TrivialBrett.mccourse.sound.ModSounds;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.effect.MobEffect;
@@ -101,7 +102,8 @@ public class ModBlocks {
 
 
     public static final RegistryObject<Block> ALEXANDRITE_LAMP = registerBlock("alexandrite_lamp",
-            () -> new AlexandriteLampBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BLUE).sound(SoundType.GLASS)
+            () -> new AlexandriteLampBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BLUE).sound(ModSounds.ALEXANDRITE_LAMP_SOUNDS)
+                    .strength(1f)
                     .lightLevel(state -> state.getValue(AlexandriteLampBlock.CLICKED) ? 15 : 0)));
     // or copy(Blocks.IRON_BLOCK)));
 
