@@ -73,6 +73,9 @@ public class ModItems {
     public static final RegistryObject<Item> BAR_BRAWL_RECORD = ITEMS.register("bar_brawl_record",
             () -> new RecordItem(4, ModSounds.BAR_BRAWL, new Item.Properties().stacksTo(1), 8720));
 
+    public static final RegistryObject<Item> RADIATION_STAFF = ITEMS.register("radiation_staff",
+            () -> new Item(new Item.Properties().durability(1024)));
+
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
     }

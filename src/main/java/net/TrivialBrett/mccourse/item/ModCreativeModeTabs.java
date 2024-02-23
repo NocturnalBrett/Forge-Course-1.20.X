@@ -41,6 +41,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.ALEXANDRITE_LEGGINGS.get());
                         output.accept(ModItems.ALEXANDRITE_BOOTS.get());
                         output.accept(ModItems.BAR_BRAWL_RECORD.get());
+                        output.accept(ModItems.RADIATION_STAFF.get());
 
                         output.accept(ModBlocks.ALEXANDRITE_BLOCK.get());
                         output.accept(ModBlocks.ALEXANDRITE_ORE.get());
