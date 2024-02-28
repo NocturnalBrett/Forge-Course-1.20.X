@@ -5,6 +5,7 @@ import net.TrivialBrett.mccourse.block.ModBlocks;
 import net.TrivialBrett.mccourse.item.ModCreativeModeTabs;
 import net.TrivialBrett.mccourse.item.ModItemProperties;
 import net.TrivialBrett.mccourse.item.ModItems;
+import net.TrivialBrett.mccourse.loot.ModLootModifiers;
 import net.TrivialBrett.mccourse.sound.ModSounds;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -16,6 +17,7 @@ import net.minecraftforge.common.CreativeModeTabRegistry;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
+import net.minecraftforge.eventbus.EventBus;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -43,6 +45,8 @@ public class MCCourseMod
         ModBlocks.register(modEventBus);
 
         ModSounds.register(modEventBus);
+
+        ModLootModifiers.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
