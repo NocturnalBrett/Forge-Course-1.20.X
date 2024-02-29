@@ -16,6 +16,7 @@ public class ModPaintingVariantTagProvider extends PaintingVariantTagsProvider {
         super(pOutput, pProvider, MCCourseMod.MOD_ID, existingFileHelper);
     }
 
+
     @Override
     protected void addTags(HolderLookup.Provider pProvider) {
         this.tag(PaintingVariantTags.PLACEABLE)
